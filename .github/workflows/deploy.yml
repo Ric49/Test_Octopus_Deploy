@@ -1,0 +1,23 @@
+name: MyBuild
+
+on:
+  push:
+    branches:
+      - main
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository 
+    - uses: actions/checkout@v2
+    
+    - name: Deploy to Octopus Deploy
+      uses: OctopusDeploy/github-action@v1
+      with:
+        OctopusURL: ${{ secrets.OCTOPUS_SERVER }}
+        OctopusAPIKey: ${{ secretes.OCTOPUS_API_KEY }}
+        Space: 'Default'
+        Package: 'Test_Octopus_Deploy/Python/test_1.py'
+        ReleaseVersion: '1.0.${{ github.run_number }}'
