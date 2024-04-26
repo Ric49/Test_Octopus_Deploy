@@ -1,4 +1,4 @@
-name: MyBuild
+name: Deploy to Octopus Deploy
 
 on:
   push:
