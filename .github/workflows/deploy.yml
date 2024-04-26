@@ -16,8 +16,8 @@ jobs:
     - name: Deploy to Octopus Deploy
       uses: OctopusDeploy/github-action@v1
       with:
-        OctopusURL: ${{ secrets.OCTOPUS_SERVER }}
-        OctopusAPIKey: ${{ secretes.OCTOPUS_API_KEY }}
+        OctopusURL: https://test1.octopus.app/app#/Spaces-1/dashboard
+        OctopusAPIKey: API-EY1UFU4LN22YUVRHMAYUTWLEW2YTOYQN
         Space: 'Default'
         Package: 'Test_Octopus_Deploy/Python/test_1.py'
-        ReleaseVersion: '1.0.${{ github.run_number }}'
+        ReleaseVersion: '1.0.1'
