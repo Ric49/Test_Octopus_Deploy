@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Deploy to Octopus Deploy
-      uses: OctopusDeploy/github-action@v1
+      uses: OctopusDeploy/deploy-release-action@v1
       with:
         OctopusURL: https://test1.octopus.app/app#/Spaces-1/dashboard
         OctopusAPIKey: API-EY1UFU4LN22YUVRHMAYUTWLEW2YTOYQN
