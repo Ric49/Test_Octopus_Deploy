@@ -20,6 +20,4 @@ jobs:
     - name: Push a package to Octopus Deploy
       uses: OctopusDeploy/push-package-action@v3
       with:
-        packages: |
-            Python/test.py
-            Terraform/main.tf
+        package: 'Python/test.py'
