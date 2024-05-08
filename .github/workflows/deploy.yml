@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-        OctopusURL: "https://test1.octopus.app/app#/Spaces-1/dashboard"
-        OctopusAPIKey: "API-EY1UFU4LN22YUVRHMAYUTWLEW2YTOYQN"
-        Space: 'Default'
+        OCTOPUS_URL: "https://test1.octopus.app/app#/Spaces-1/dashboard"
+        OCTOPUS_API_KEY: "API-EY1UFU4LN22YUVRHMAYUTWLEW2YTOYQN"
+        OCTOPUS_SPACE: 'Default'
         
     steps:
     - uses: actions/checkout@v3
