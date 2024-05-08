@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Push a package to Octopus Deploy
-      uses: OctopusDeploy/push-package-action@v3
+      uses: OctopusDeploy/OctopusDeploy-Api@v1
       env:
         OCTOPUS_URL: "https://test1.octopus.app/app#/Spaces-1/dashboard"
         OCTOPUS_API_KEY: "API-EY1UFU4LN22YUVRHMAYUTWLEW2YTOYQN"
