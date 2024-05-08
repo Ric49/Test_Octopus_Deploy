@@ -9,16 +9,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repository 
-      uses: actions/checkout@v3
-    
-    - name: Push a package to Octopus Deploy
-      uses: OctopusDeploy/push-package-action@v3
-      env:
+    env:
         OctopusURL: 'https://test1.octopus.app/app#/Spaces-1/dashboard'
         OctopusAPIKey: 'API-EY1UFU4LN22YUVRHMAYUTWLEW2YTOYQN'
         Space: 'Default'
+        
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Push a package to Octopus Deploy
+      uses: OctopusDeploy/push-package-action@v3
       with:
         packages: |
             package1.tar.gz
