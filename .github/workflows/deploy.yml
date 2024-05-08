@@ -21,6 +21,5 @@ jobs:
       uses: OctopusDeploy/push-package-action@v3
       with:
         packages: |
-            package1.tar.gz
-            package2.zip
-            packages/**/*.zip
+            Python/test.py
+            Terraform/main.tf
