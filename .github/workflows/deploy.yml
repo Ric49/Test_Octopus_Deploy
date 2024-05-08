@@ -20,4 +20,4 @@ jobs:
     - name: Push a package to Octopus Deploy
       uses: OctopusDeploy/push-package-action@v3
       with:
-        package: 'Python/test.py'
+        packages: 'Python/test.py'
